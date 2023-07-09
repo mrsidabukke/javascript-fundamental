@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+    #wrap{
+        background-color: rgb(172, 160, 104);
+        color: white;     
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    </style>
+    
+</head>
+<body>
+    
+<img src="kodok.jpg" width="450" height="450" alt="gambar kodok lucu">
+<div id="wrap"></div>
+
+    <script>
+        /* 1. memillih id wrap
+         2. mengubah isi dari id wrap
+         3. getelementbyid adalah mengambil elemen berdasarkan id
+         4. innerhtml adalah mengubah isi dari elemen */
+
+         /* deklarasi variabel
+         nama diawali dengan var dan di ikuti dengan huruf . _  . dan $
+         nama boleh mengandung huruf,angka,_,$
+         nama itu case sensitive
+         ada reserved word yang tidak boleh digunakan sebagai nama variabel 
+         */
+
+         // tipe data string
+         var berak = "bauk";
+         // tipe data number
+         var x    = 10;
+         var y    = 20 ;
+         var z    = 30.212 + 21332.3132;    
+         var e    = 123;
+         // anda dapat mengubah variabel seperti contoh dibawah ini
+            x = 100;
+         // anda juga dapat menggabungkan variabel seperti contoh dibawah ini
+            var a = z + y;
+         // operator aritmatika
+         // + - * / %
+            var b = x + y;   
+             b ++ ; // increment
+             e -- ; // decrement
+        // anda juga dapat mempersingkat ketikan dengan cara seperti dibawah ini
+            // x += 10; // x = x + 10;
+            // y -= 10; // y = y - 10;
+            // z *= 10; // z = z * 10;
+            // e /= 10; // e = e / 10;     
+        
+        // metode angka antara lain ada tofixed ,tostring, random, max, min, 
+        // tofixed adalah mengubah angka menjadi desimal
+        // tostring adalah mengubah angka menjadi string
+        // random adalah mengacak angka
+        // max adalah mencari angka terbesar
+        // min adalah mencari angka terkecil
+        // contoh
+        var c = 10.12312
+        var d = c.toFixed(2);
+        var f = c.toString();
+        var g = Math.random().toFixed(2)+1;
+        var h = Math.max(1,2,3,4,5,6,7,8,9,10);
+        var i = Math.min(1,2,3,4,5,6,7,8,9,10);   
+        // metode angka 2 antara lain ada round, ceil, floor , object method
+        // round adalah membulatkan angka
+        // ceil adalah membulatkan angka keatas
+        // floor adalah membulatkan angka kebawah
+        // object method adalah memanggil object seperti pi, sqrt, abs, pow, sin, cos
+        // contoh
+        var j = Math.round(1.4);
+        var k = Math.ceil(1.4);
+        var l = Math.floor(1.4);
+        // object method
+        var m = Math.PI;
+        var n = Math.sqrt(64);
+        var o = Math.abs(-4.7);
+        var p = Math.pow(8,2);
+        var q = Math.sin(90 * Math.PI / 180);
+        var r = Math.cos(0 * Math.PI / 180);
+
+        // random specific formula  math.floor(math.random() * (max - min + 1)) + min;
+        
+       // metode string antara lain ada length, indexof, lastindexof, search, slice, substring, substr, replace, touppercase, tolowercase, concat, trim, charat, split
+         // length adalah menghitung jumlah karakter
+            // indexof adalah mencari karakter pertama
+            // lastindexof adalah mencari karakter terakhir
+            // search adalah mencari karakter pertama
+            // slice adalah memotong karakter
+            // substring adalah memotong karakter
+            // substr adalah memotong karakter
+            // replace adalah mengganti karakter
+            // touppercase adalah mengubah menjadi huruf besar
+            // tolowercase adalah mengubah menjadi huruf kecil
+            // concat adalah menggabungkan string
+            // trim adalah menghapus spasi
+            // charat adalah mengambil karakter
+            // split adalah memisahkan karakter
+            // contoh
+            var s = "halo dunia";
+            var t = s.length;
+            var u = s.indexOf("dunia");
+            var v = s.lastIndexOf("dunia");
+            var w = s.search("dunia");
+            var x = s.slice(5,10);
+            var y = s.substring(5,10);
+            var z = s.substr(5,10);
+            var aa = s.replace("dunia","indonesia");
+            var ab = s.toUpperCase();
+            var ac = s.toLowerCase();
+            var ad = s.concat(" saya sedang belajar javascript");
+            var ae = s.trim();
+            var af = s.charAt(5);
+            var ag = s.split(" ");
+
+        // function adalah blok kode yang dapat digunakan kembali
+        // contoh
+        // function print_text(){
+        //     document.getElementById("wrap").innerHTML = "halo dunia";
+        // }
+
+        // fungsi berparameter
+        // contoh
+       function br(){
+              document.write("<br>");
+              document.write("<br>");
+       }
+
+       function space(){
+           document.write("&nbsp");
+       }
+        
+    //    var text = "halo dunia";
+    //     function print_text(text){
+    //         text = text + " saya sedang belajar javascript";
+    //         document.getElementById("wrap").innerHTML = text;
+    //     }
+           
+        // print_text(text+ " " +"sekarang");
+
+        br();
+
+        document.write("ini adalah fungsi untuk menampilkan tulisan pada javascript");
+        br();
+
+        // function dengan beberapa parameter
+        // contoh
+        function print_text2(text1,text2){
+            document.write(text1 + " " + text2);
+        }
+        print_text2("halo","dunia");
+        br();
+
+        // function dengan return
+        // return adalah mengembalikan nilai
+        // contoh 1
+        //  function text(){
+        //      var aa = "te";
+        //      var ab = "amo";
+
+        //     return aa + ab;
+        //  }
+        // document.getElementById("wrap").innerHTML = text();
+         
+        //contoh 2
+          function hitung(tahun){
+        
+            return tahun + 2000;
+         }
+        document.getElementById("wrap").innerHTML = hitung(30);
+        
+        
+        
+
+
+        
+
+      
+        
+   
+
+
+    </script>
+</body>
+</html>
