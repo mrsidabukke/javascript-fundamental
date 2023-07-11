@@ -1,0 +1,1 @@
+# javascript-fundamentalth this code was my first code when learning java scrpit in the past . it has many js fundamental code and also a decription to it too . so u can use this code to learn js fundamental
